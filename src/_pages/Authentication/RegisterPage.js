@@ -3,7 +3,6 @@ import {Redirect} from "react-router-dom";
 import {userService} from "../../_services/user.service"
 import {DemoWarningBar} from '../../_components';
 import {connect} from "react-redux";
-import user from "../../resources/user_dark.png";
 
 class RegisterPage extends React.Component {
     constructor(props) {

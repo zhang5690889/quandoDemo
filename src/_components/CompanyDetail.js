@@ -19,26 +19,23 @@ class CompanyDetail extends React.Component {
             end: "",
             strategy: "",
             planners: [],
-            like: false,
+            like: false
         }
 
     }
 
-
     componentDidMount() {
-        let link = this.companyService.retrieveChart(this.props.ticker);
         let user = this.userService.getLocalUser();
 
         this.companyService.findCompanyDetail(this.props.ticker)
             .then(company => {
                 this.setState({
-                    chartURL: link,
+                    chartURL: this.companyService.retrieveChart(this.props.ticker),
                     stockDetail: company,
                     planners: [],
                     user: user,
                 })
             })
-
     }
 
     updateChartType(type) {
@@ -99,10 +96,23 @@ class CompanyDetail extends React.Component {
         })
     };
 
+    updateTicker(ticker) {
+        this.companyService.findCompanyDetail(ticker)
+            .then(company => {
+                this.setState({
+                    chartURL: this.companyService.retrieveChart(ticker),
+                    stockDetail: company,
+                    planners: []
+                })
+            })
+    }
 
     render() {
+
         return (
             <div className={"gray-body"}>
+
+
                 {
                     this.state.chartURL &&
                     <div className={""}>
@@ -113,7 +123,7 @@ class CompanyDetail extends React.Component {
                             <div className="d-md-flex flex-md-equal my-md-3 pl-md-3 border-bottom">
                                 <div
                                     className=" mr-md-3  px-3 px-md-5 text-center  overflow-hidden">
-                                    <div className="my-3 py-3">
+                                    <div className="">
                                         <div
                                             className="btn-toolbar mb-2 mb-md-0 d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                                             <div className="btn-group flex-wrap mr-2">
@@ -135,7 +145,6 @@ class CompanyDetail extends React.Component {
                                                         onClick={(event) => this.updateTimeframe(event.target.value)}>Monthly
                                                 </button>
                                                 {
-                                                    this.state.user && this.state.user.role === "Trader" &&
                                                     <button
                                                         className={"btn btn-sm btn-outline-secondary ml-2"}
                                                         onClick={() => {
@@ -143,15 +152,6 @@ class CompanyDetail extends React.Component {
                                                         }}>Like it? <span><i className={"fa fa-heart ml-1"}
                                                                              id={this.state.like ? "red-heart" : "heart"}/></span>
                                                     </button>
-                                                }
-                                                {
-                                                    !this.state.user &&
-                                                    <a
-                                                        className={"btn btn-sm btn-outline-secondary d-inline-flex ml-2"}
-                                                        href={"/login"}
-                                                    >Like it <span><i className={"fa fa-heart fa-xs ml-1"}
-                                                                      id={"heart"}/></span>
-                                                    </a>
                                                 }
                                             </div>
                                         </div>
@@ -176,7 +176,7 @@ class CompanyDetail extends React.Component {
 
                                     <iframe width="219" height="302"
                                             src="http://calculator-1.com/outdoor/?f=00ff00&r=42aaff" scrolling="no"
-                                            frameBorder="0"></iframe>
+                                            frameBorder="0"/>
                                 </div>
 
 

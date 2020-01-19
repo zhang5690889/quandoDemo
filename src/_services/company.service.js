@@ -8,14 +8,6 @@ export default class CompanyService {
         this.finvizURL = 'https://finviz.com/chart.ashx?';
     }
 
-    searchCompany(term) {
-        return fetch(this.url + '/searchCompany?term=' + term, {
-            method: 'GET'
-        }).then(response =>
-        {
-            return response.json()
-        })
-    }
 
     retrieveChart(ticker,type = 'c',isAdvanced = 0, timeFrame = 'd'){
         return this.finvizURL+Utility.buildURLQuery({
@@ -41,7 +33,22 @@ export default class CompanyService {
     }
 
 
+
     findCompanyDetail(ticker) {
+
+        let data = [
+            {
+                symbol: 'TSLA',
+                Name: 'Tesla, Inc. ',
+                marketcap: '$31.89B',
+                IPOyear: '2010',
+                Sector: 'Capital Goods',
+                industry: 'Auto Manufacturing',
+                Summary_Quote: 'https://www.nasdaq.com/symbol/tsla'
+            },
+
+        ]
+
         return fetch(this.url + '/findCompanyDetail?ticker=' + ticker, {
             method: 'GET'
         }).then(response =>
@@ -49,14 +56,5 @@ export default class CompanyService {
             return response.json()
         })
 
-    }
-
-    getRelatedNews(ticker) {
-        return fetch(this.url + '/getRelatedNews?ticker=' + ticker, {
-            method: 'GET'
-        }).then(response =>
-        {
-            return response.json()
-        })
     }
 }
