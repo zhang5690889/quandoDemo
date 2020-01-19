@@ -12,8 +12,8 @@ class Routing extends React.Component {
             <Router>
                 <div>
                     <Route exact path="/" component={HomePage}/>
-                    <Route path="/login" component={LoginPage}/>
-                    <Route path="/register" component={RegisterPage}/>
+                    <Route exact path="/login" component={LoginPage}/>
+                    <Route exact path="/register" component={RegisterPage}/>
                 </div>
             </Router>
         );
