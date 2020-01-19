@@ -131,7 +131,6 @@ class AnonymousHomePage extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        user: state.authentication.user
     };
 }
 
