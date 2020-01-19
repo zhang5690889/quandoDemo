@@ -25,17 +25,12 @@ class CompanyDetail extends React.Component {
     }
 
     componentDidMount() {
-        let user = this.userService.getLocalUser();
-
-        this.companyService.findCompanyDetail(this.props.ticker)
-            .then(company => {
-                this.setState({
-                    chartURL: this.companyService.retrieveChart(this.props.ticker),
-                    stockDetail: company,
-                    planners: [],
-                    user: user,
-                })
-            })
+        let company = this.companyService.findCompanyDetail(this.props.ticker);
+        this.setState({
+            chartURL: this.companyService.retrieveChart(this.props.ticker),
+            stockDetail: company,
+            planners: []
+        })
     }
 
     updateChartType(type) {
@@ -97,14 +92,12 @@ class CompanyDetail extends React.Component {
     };
 
     updateTicker(ticker) {
-        this.companyService.findCompanyDetail(ticker)
-            .then(company => {
-                this.setState({
-                    chartURL: this.companyService.retrieveChart(ticker),
-                    stockDetail: company,
-                    planners: []
-                })
-            })
+        const company = this.companyService.findCompanyDetail(ticker);
+        this.setState({
+            chartURL: this.companyService.retrieveChart(ticker),
+            stockDetail: company,
+            planners: []
+        })
     }
 
     render() {
@@ -184,8 +177,6 @@ class CompanyDetail extends React.Component {
                         </div>
                     </div>
                 }
-                {
-                    this.state.user && this.state.user.role === "Trader" &&
                     <div className={"container marketing"}>
                         <div className="d-md-flex flex-md-equal my-md-3 pl-md-3 border-bottom">
 
@@ -248,7 +239,7 @@ class CompanyDetail extends React.Component {
                                     </button>
                                 </div>
                             </div>
-                            {this.state.user && this.state.planners.length !== 0 &&
+                            {this.state.planners.length !== 0 &&
                             <div className="bg-light mr-md-3 px-3 px-md-5 overflow-hidden mb-3">
                                 <h2 className={"display-5"}>Current Plans</h2>
                                 <div className="my-3 p-3">
@@ -291,7 +282,6 @@ class CompanyDetail extends React.Component {
                             }
                         </div>
                     </div>
-                }
             </div>
         );
     }
