@@ -61,7 +61,7 @@ class AnonymousHomePage extends React.Component {
                     <div className="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
                         <img src={logo} style={{width: "50%"}}/>
                         <div className="col-md-5 mx-auto">
-                            <p className="lead font-weight-normal">Online planning software for hedge funds</p>
+                            <p className="font-weight-normal">Online planning software for hedge funds</p>
                         </div>
                     </div>
 
@@ -98,7 +98,7 @@ class AnonymousHomePage extends React.Component {
                     <div className="row featurette">
                         <div className="col-md-7 order-md-2">
                             <h2 className="featurette-heading">{this.state.news[1].title}</h2>
-                            <p className="lead">{this.state.news[1].description}</p>
+                            <p className="">{this.state.news[1].description}</p>
                             <a href={this.state.news[1].url} target={"_blank"}>Read more</a>
                         </div>
                         <div className="col-md-5 order-md-1">
@@ -112,7 +112,7 @@ class AnonymousHomePage extends React.Component {
                     <div className="row featurette">
                         <div className="col-md-7">
                             <h2 className="featurette-heading">{this.state.news[2].title}</h2>
-                            <p className="lead">{this.state.news[2].description}</p>
+                            <p className="">{this.state.news[2].description}</p>
                             <a href={this.state.news[2].url} target={"_blank"}>Read more</a>
                         </div>
                         <div className="col-md-5">
