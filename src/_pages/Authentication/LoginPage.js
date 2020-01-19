@@ -70,10 +70,8 @@ class LoginPage extends React.Component {
 }
 
 function mapStateToProps(state) {
-    const {user, loggedInFailed} = state.authentication;
     return {
-        user: user,
-        loggedInFailed: loggedInFailed
+
     };
 }
 

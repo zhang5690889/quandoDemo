@@ -11,7 +11,6 @@ class CompanyDetail extends React.Component {
         this.state = {
             chartURL: "",
             stockDetail: "",
-            user: "",
             title: "",
             start: "",
             end: "",

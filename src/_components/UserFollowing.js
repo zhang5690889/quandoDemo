@@ -1,5 +1,4 @@
 import React from "react";
-import {userService} from '../_services/user.service'
 import {Link} from "react-router-dom";
 import photo from "../resources/user_dark.png"
 
@@ -7,7 +6,6 @@ export default class UserFollowing extends React.Component {
 
     constructor(props) {
         super(props);
-        this.userService = userService;
         this.state = {
             username: this.props.username,
             unfollowedTraders: [],

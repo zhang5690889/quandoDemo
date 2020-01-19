@@ -137,10 +137,8 @@ class RegisterPage extends React.Component {
 }
 
 function mapStateToProps(state) {
-    const {user, registerFailed} = state.authentication;
     return {
-        user: user,
-        registerFailed: registerFailed
+
     };
 }
 
