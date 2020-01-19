@@ -1,6 +1,5 @@
 import React from "react";
 import {Redirect} from "react-router-dom";
-import {userService} from "../../_services/user.service"
 import {DemoWarningBar} from '../../_components';
 import {connect} from "react-redux";
 
@@ -16,7 +15,6 @@ class RegisterPage extends React.Component {
             managers: "",
             submitted: false
         };
-        this.userService = userService;
     }
 
     handleSubmit = (e) => {

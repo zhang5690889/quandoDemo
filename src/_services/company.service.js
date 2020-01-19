@@ -1,10 +1,8 @@
-import APIURL from './config'
 import {Utility} from './Utility'
 
 export default class CompanyService {
 
     constructor() {
-        this.url = APIURL + "company";
         this.finvizURL = 'https://finviz.com/chart.ashx?';
     }
 

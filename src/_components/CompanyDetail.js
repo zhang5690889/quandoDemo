@@ -1,13 +1,11 @@
 import React from 'react';
 import CompanyService from '../_services/company.service'
-import {userService} from '../_services/user.service'
 
 class CompanyDetail extends React.Component {
 
     constructor(props) {
         super(props);
         this.companyService = new CompanyService();
-        this.userService = userService;
 
 
         this.state = {
