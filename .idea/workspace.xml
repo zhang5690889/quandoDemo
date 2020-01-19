@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/_components/CompanyDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="167" column="66" selection-start-line="167" selection-start-column="66" selection-end-line="167" selection-end-column="66" />
+            <state relative-caret-position="255">
+              <caret line="165" column="63" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="63" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -178,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="480" />
     <option name="width" value="1450" />
     <option name="height" value="960" />
@@ -385,7 +385,7 @@
       <workItem from="1569442682906" duration="264000" />
       <workItem from="1579362586210" duration="720000" />
       <workItem from="1579363843230" duration="24150000" />
-      <workItem from="1579400410228" duration="1095000" />
+      <workItem from="1579400410228" duration="1562000" />
     </task>
     <task id="LOCAL-00008" summary="fixed minor bugs">
       <created>1559431235266</created>
@@ -734,18 +734,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25965000" />
+    <option name="totallyTimeSpent" value="26432000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="384" y="0" width="1160" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17184402" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23152271" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.36220473" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.296034" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32861635" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1002,8 +1002,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_components/CompanyDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="167" column="66" selection-start-line="167" selection-start-column="66" selection-end-line="167" selection-end-column="66" />
+        <state relative-caret-position="255">
+          <caret line="165" column="63" selection-start-line="165" selection-start-column="63" selection-end-line="165" selection-end-column="63" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

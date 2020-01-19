@@ -163,10 +163,11 @@ class CompanyDetail extends React.Component {
                                         </ol>
 
                                     </div>
-
-                                    <iframe width="219" height="302"
-                                            src="https://calculator-1.com/outdoor/?f=00ff00&r=42aaff" scrolling="no"
-                                            frameBorder="0"/>
+                                    <div className="p-2 d-flex justify-content-center">
+                                        <iframe  width="219" height="302"
+                                                src="https://calculator-1.com/outdoor/?f=00ff00&r=42aaff" scrolling="no"
+                                                frameBorder="0"/>
+                                    </div>
                                 </div>
 
 
