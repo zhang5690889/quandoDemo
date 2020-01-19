@@ -165,7 +165,7 @@ class CompanyDetail extends React.Component {
                                     </div>
 
                                     <iframe width="219" height="302"
-                                            src="http://calculator-1.com/outdoor/?f=00ff00&r=42aaff" scrolling="no"
+                                            src="https://calculator-1.com/outdoor/?f=00ff00&r=42aaff" scrolling="no"
                                             frameBorder="0"/>
                                 </div>
 
